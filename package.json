@@ -1,0 +1,30 @@
+{
+  "name": "algorithm-practice",
+  "version": "1.0.0",
+  "description": "算法练习",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "f2elint-scan": "f2elint scan",
+    "f2elint-fix": "f2elint fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tedpan/algorithm-practice.git"
+  },
+  "author": "ted",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tedpan/algorithm-practice/issues"
+  },
+  "homepage": "https://github.com/tedpan/algorithm-practice#readme",
+  "devDependencies": {
+    "f2elint": "^1.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "f2elint commit-file-scan",
+      "commit-msg": "f2elint commit-msg-scan"
+    }
+  }
+}
