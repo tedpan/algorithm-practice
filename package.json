@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/tedpan/algorithm-practice#readme",
   "devDependencies": {
-    "f2elint": "^1.1.2"
+    "f2elint": "^1.1.2",
+    "typescript": "^4.2.3"
   },
   "husky": {
     "hooks": {
