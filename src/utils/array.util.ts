@@ -7,9 +7,9 @@ export function generateArray(length: number): number[] {
 
 /** 洗牌函数，打乱数组 */
 export function shuffle<T>(arr: T[]): T[] {
-  for (let index = 0; index < arr.length; index++) {
+  for (let index = 0; index < arr.length - 2; index++) {
     // 每一项 跟 余下数组范围 [index+1,arr.length-1] 中随机一项交换位置
-    const randomIndex = Math.floor(Math.random() * (arr.length - index - 2) + index + 1);
+    const randomIndex = Math.floor(Math.random() * (arr.length - index - 1) + index + 1);
     swap(arr, index, randomIndex);
   }
   return arr;

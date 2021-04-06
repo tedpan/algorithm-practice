@@ -9,8 +9,9 @@ export default function bubbleSort<T>(arr: T[]): T[] {
   const len = arr.length;
   // 执行次数
   for (let time = 0; time < len; time++) {
-    // 比较相邻两项
-    for (let index = 0; index < len - 1; index++) {
+    // 比较相邻两项, 跳过已经排序的项
+    for (let index = 0; index < len - 1 - time; index++) {
+      // 排序条件
       if (arr[index] < arr[index + 1]) {
         swap(arr, index, index + 1);
       }
@@ -23,7 +24,7 @@ function test() {
   const ramdomArr = generateRandomArray(10);
   console.log('randamArr:', ramdomArr);
   const sortArr = bubbleSort(ramdomArr);
-  console.log('sortArr', sortArr);
+  console.log('sortArr:', sortArr);
 }
 
 test();
