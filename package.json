@@ -4,7 +4,7 @@
   "description": "算法练习",
   "main": ".eslintrc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "f2elint-scan": "f2elint scan",
     "f2elint-fix": "f2elint fix"
   },
@@ -19,7 +19,11 @@
   },
   "homepage": "https://github.com/tedpan/algorithm-practice#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.14.1",
+    "babel-jest": "^26.6.3",
     "f2elint": "^1.1.2",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.5",
     "typescript": "^4.2.3"
   },
   "husky": {
@@ -27,8 +31,5 @@
       "pre-commit": "f2elint commit-file-scan",
       "commit-msg": "f2elint commit-msg-scan"
     }
-  },
-  "dependencies": {
-    "ts-node": "^9.1.1"
   }
 }

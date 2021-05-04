@@ -1,4 +1,4 @@
-import { swap, generateRandomArray } from '../utils/array.util';
+import { swap } from '../utils/array.util';
 
 /**
  * 选择排序
@@ -23,12 +23,3 @@ export default function selectionSort<T>(arr: T[]): T[] {
   }
   return arr;
 }
-
-function test() {
-  const ramdomArr = generateRandomArray(10);
-  console.log('randamArr:', ramdomArr);
-  const sortArr = selectionSort(ramdomArr);
-  console.log('sortArr:', sortArr);
-}
-
-test();

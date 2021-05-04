@@ -1,5 +1,3 @@
-import { generateRandomArray } from '../utils/array.util';
-
 /**
  * 插入排序
  * 逐项按排序规则插入
@@ -22,12 +20,3 @@ export default function insertionSort<T>(arr: T[]): T[] {
   }
   return arr;
 }
-
-function test() {
-  const ramdomArr = generateRandomArray(10);
-  console.log('randamArr:', ramdomArr);
-  const sortArr = insertionSort(ramdomArr);
-  console.log('sortArr:', sortArr);
-}
-
-test();
