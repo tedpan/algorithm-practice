@@ -1,5 +1,5 @@
-import { generateRandomArray } from '@/src/utils/array.util';
-import selectionSort from '@/src/base/selectionSort';
+import { generateRandomArray } from '@/utils/array.util';
+import selectionSort from '@/base/selectionSort';
 
 test('selectionSort', () => {
   const ramdomArr = generateRandomArray(10);

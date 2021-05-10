@@ -1,5 +1,5 @@
-import { generateRandomArray } from '@/src/utils/array.util';
-import heapSort from '@/src/base/heapSort';
+import { generateRandomArray } from '@/utils/array.util';
+import heapSort from '@/base/heapSort';
 
 test('heapSort', () => {
   const ramdomArr = generateRandomArray(10);

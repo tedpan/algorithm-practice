@@ -20,6 +20,7 @@
   "homepage": "https://github.com/tedpan/algorithm-practice#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.14.1",
+    "@types/jest": "^26.0.23",
     "babel-jest": "^26.6.3",
     "f2elint": "^1.1.2",
     "jest": "^26.6.3",

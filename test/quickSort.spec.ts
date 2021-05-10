@@ -1,5 +1,5 @@
-import { generateRandomArray } from '@/src/utils/array.util';
-import quickSort from '@/src/base/quickSort';
+import { generateRandomArray } from '@/utils/array.util';
+import quickSort from '@/base/quickSort';
 
 test('quickSort', () => {
   const ramdomArr = generateRandomArray(10);

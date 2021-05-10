@@ -1,5 +1,5 @@
-import { generateRandomArray } from '@/src/utils/array.util';
-import mergeSort from '@/src/base/mergeSort';
+import { generateRandomArray } from '@/utils/array.util';
+import mergeSort from '@/base/mergeSort';
 
 test('mergeSort', () => {
   const ramdomArr = generateRandomArray(10);

@@ -1,5 +1,5 @@
-import { generateRandomArray } from '@/src/utils/array.util';
-import bubbleSort from '@/src/base/bubbleSort';
+import { generateRandomArray } from '@/utils/array.util';
+import bubbleSort from '@/base/bubbleSort';
 
 test('bubbleSort', () => {
   const ramdomArr = generateRandomArray(10);
