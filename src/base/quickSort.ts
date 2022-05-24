@@ -9,36 +9,37 @@ import { swap } from '../utils/array.util';
  * 时间复杂度 O(nlogn)
  */
 export default function quickSort<T>(arr: T[]): T[] {
-  return quick(arr, 0, arr.length - 1);
-}
-
-function quick<T>(arr: T[], leftIndex: number, rightIndex: number): T[] {
   if (arr.length > 1) {
-    const index = partition(arr, leftIndex, rightIndex);
-    if (leftIndex < index - 1) {
-      quick(arr, leftIndex, index - 1);
-    }
-    if (rightIndex > index) {
-      quick(arr, index, rightIndex);
-    }
+    quick(arr, 0, arr.length - 1);
   }
   return arr;
 }
 
+function quick<T>(arr: T[], leftIndex: number, rightIndex: number): void {
+  if (leftIndex >= rightIndex) {
+    return;
+  }
+  const index = partition(arr, leftIndex, rightIndex);
+  quick(arr, leftIndex, index - 1);
+  quick(arr, index, rightIndex);
+}
+
 function partition<T>(arr: T[], leftIndex: number, rightIndex: number): number {
-  const middleValue = arr[Math.floor((leftIndex + rightIndex) / 2)];
-  while (leftIndex <= rightIndex) {
-    while (arr[leftIndex] < middleValue) {
-      leftIndex++;
+  const pivotValue = arr[Math.floor((leftIndex + rightIndex) / 2)];
+  let l = leftIndex;
+  let r = rightIndex;
+  while (l <= r) {
+    while (arr[l] < pivotValue) {
+      l++;
     }
-    while (arr[rightIndex] > middleValue) {
-      rightIndex--;
+    while (arr[r] > pivotValue) {
+      r--;
     }
-    if (leftIndex <= rightIndex) {
-      swap(arr, leftIndex, rightIndex);
-      leftIndex++;
-      rightIndex--;
+    if (l <= r) {
+      swap(arr, l, r);
+      l++;
+      r--;
     }
   }
-  return leftIndex;
+  return l;
 }
